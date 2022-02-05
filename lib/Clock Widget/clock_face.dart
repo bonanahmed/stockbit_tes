@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:stockbit_tes/Clock Widget/clock_dial_painter.dart';
 import 'package:stockbit_tes/Clock Widget/clock_hands.dart';
 
+/// This is the base of the clock, here you can define the appearance of the clock, you can decide
+/// which color as the base, the outer clock etc.
 class ClockFace extends StatelessWidget {
   final ClockText clockText;
   final bool isAlarm;

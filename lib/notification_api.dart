@@ -4,6 +4,8 @@ import 'package:intl/intl.dart';
 import 'package:rxdart/subjects.dart';
 import 'package:timezone/timezone.dart' as tz;
 
+///This is where we want to setup the notification setting, and to init the notification
+///so it can be show later when needed
 class NotificationApi {
   static final _notifications = FlutterLocalNotificationsPlugin();
   static final onNotification = BehaviorSubject<String?>();

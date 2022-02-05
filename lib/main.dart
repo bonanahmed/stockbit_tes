@@ -9,7 +9,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -19,6 +18,7 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.tealAccent,
           splashColor: Colors.teal),
       initialRoute: '/',
+      //Go To SplashScreen First
       home: SplashScreen(),
     );
   }

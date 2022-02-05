@@ -181,7 +181,6 @@ class SetAlarmPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width / 1.5,
               child: Clock(
                 circleColor: Colors.black,
-                bellColor: Colors.green,
                 clockText: ClockText.arabic,
                 isAlarm: true,
               ),

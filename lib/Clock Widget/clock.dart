@@ -2,24 +2,23 @@ import 'package:stockbit_tes/Clock Widget/clock_text.dart';
 import 'package:flutter/material.dart';
 import 'package:stockbit_tes/Clock Widget/clock_face.dart';
 
+///This is clock widget that have 4 component which clock face at the base, clock text for the digits, clock dial painter for
+///put the digits arounds the clock face, and clock hand for time indicator
 class Clock extends StatelessWidget {
   final Color circleColor;
-  final Color bellColor;
-  final Color legColor;
   final ClockText clockText;
   final bool isAlarm;
 
   const Clock({
     Key? key,
     this.circleColor = Colors.black,
-    this.bellColor = const Color(0xFF333333),
-    this.legColor = const Color(0xFF555555),
     this.clockText = ClockText.arabic,
     this.isAlarm = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // Using aspect ratio so the clock can be round
     return AspectRatio(
       aspectRatio: 1.0,
       child: buildClockCircle(context),
@@ -39,6 +38,7 @@ class Clock extends StatelessWidget {
           )
         ],
       ),
+      // This is the base of the clock which will contain clock hand
       child: ClockFace(
         clockText: clockText,
         isAlarm: isAlarm,

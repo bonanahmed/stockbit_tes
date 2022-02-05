@@ -19,16 +19,15 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-
     _loadWidget();
   }
 
   _loadWidget() async {
     var _duration = Duration(seconds: splashDelay);
-    return Timer(_duration, navigationPage);
+    return Timer(_duration, _navigationPage);
   }
 
-  void navigationPage() {
+  void _navigationPage() {
     Navigator.pushReplacement(context,
         MaterialPageRoute(builder: (BuildContext context) => Wrapper()));
   }
@@ -42,7 +41,6 @@ class _SplashScreenState extends State<SplashScreen> {
       child: Center(
         child: Image(
           image: AssetImage("assets/img/logo_stockbit.png"),
-// width: MediaQuery.of(context).size.width,
         ),
       ),
     ));

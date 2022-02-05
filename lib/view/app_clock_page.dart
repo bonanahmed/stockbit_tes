@@ -4,6 +4,7 @@ import 'package:stockbit_tes/Clock%20Widget/clock.dart';
 import 'package:stockbit_tes/Clock%20Widget/clock_text.dart';
 import 'package:stockbit_tes/controller/timer_controller.dart';
 
+///This is the main page, we will see a clock that only show time and can't be setup
 class AppClock extends StatefulWidget {
   @override
   _AppClockState createState() => _AppClockState();
@@ -40,6 +41,7 @@ class _AppClockState extends State<AppClock> {
           children: <Widget>[
             Container(
                 margin: EdgeInsets.fromLTRB(0, 50, 0, 50),
+                //Here you will see time from getx state management controller
                 child: Obx(
                   () => Text(
                     "${timerController.waktu.value.hour.toString().padLeft(2, '0')}:${timerController.waktu.value.minute.toString().padLeft(2, '0')}:${timerController.waktu.value.second.toString().padLeft(2, '0')}",
@@ -48,10 +50,13 @@ class _AppClockState extends State<AppClock> {
                 )),
             Container(
               width: MediaQuery.of(context).size.width / 1.5,
+              //This is Clock Widget
               child: Clock(
+                // For outer clock circle color
                 circleColor: Colors.black,
-                bellColor: Colors.green,
+                //Text for digits, there are two types, arabic, and roman
                 clockText: ClockText.arabic,
+                //This is where you decide this clock widget can be setup or not
                 isAlarm: false,
               ),
             ),
